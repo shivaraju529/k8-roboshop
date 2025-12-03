@@ -2,13 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongodb
-  Namespace: roboshop
+  namespace: roboshop
   labels: 
     project: roboshop
     component: mongodb
     tier: db
 spec:
-  replica: 1
+  replicas: 1
   selector:
    # these labels are used to select pods
     matchLabels:
